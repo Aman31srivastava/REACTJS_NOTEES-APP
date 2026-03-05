@@ -1,0 +1,211 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* BODY */
+
+body {
+  min-height: 100vh;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: 0.3s ease;
+}
+
+/* DARK MODE */
+
+.container.dark {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+}
+
+/* APP WRAPPER */
+
+.app-wrapper {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* HEADING */
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+/* TOP BAR */
+
+.top-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.top-bar input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.top-bar button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* INPUT SECTION */
+
+.input-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.input-section button {
+  padding: 14px 25px;
+  border-radius: 10px;
+  border: none;
+  background: #00c853;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* NOTES GRID */
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* NOTE CARD */
+
+.note {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 140px;
+  transition: 0.2s;
+}
+
+.container.dark .note {
+  background: rgba(255,255,255,0.1);
+}
+
+/* HOVER */
+
+.note:hover {
+  transform: translateY(-5px);
+}
+
+/* NOTE TEXT */
+
+.note p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* DATE */
+
+.note small {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ACTIONS */
+
+.note-actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.note-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* PINNED */
+
+.pinned {
+  border-left: 4px solid gold;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer span {
+  font-weight: 600;
+}
+
+.footer-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-icons a {
+  font-size: 22px;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+  color: gold;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .top-bar {
+    flex-direction: column;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+}
